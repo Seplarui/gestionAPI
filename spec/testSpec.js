@@ -19,13 +19,3 @@ describe('API ON',function() {
         });
     });
 });
-
-/*describe ('Hola Mundo', function() {
-    it('the correct word', function(done) {
-        const defaultButtonText = "Hola Mundo";
-       // body = document.getElementsByTagName
-       //expect(view.el.html().indexOf('Hola Mundo') != -1 ).toBe(true);
-       //expect(reviewElement.getText()).toEqual("My text");
-       expect(document.getElementsByTagName("body")).toEqual("kk");
-    })
-})*/
