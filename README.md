@@ -1,0 +1,7 @@
+# gestionAPI
+
+## tests
+
+```
+npm test
+```
