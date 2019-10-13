@@ -15,3 +15,7 @@ app.use((req,res,next) => {
 app.get('/hola', function(req,res) {
     res.send('Hola Mundo');
 })
+
+app.post('/api/empresa', function(req,res) {
+
+})
