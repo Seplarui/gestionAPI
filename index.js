@@ -38,11 +38,6 @@ app.post('/api/empresa', function (req, res) {
     conexion.query('insert into empresas(empresas.CIF) VALUES (?)', cif, function (err, success) {
         res.status(200).send({ message: success });
     });
-})
-
-app.post('/test', (req, res) => {
-    console.log(req.body.cif);
-    res.json({ requestBody: req.body })  // <==== req.body will be a parsed JSON object
 });
 
 
