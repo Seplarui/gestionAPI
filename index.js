@@ -33,10 +33,12 @@ app.get('/api/empresa', function (req, res) {
 
 app.post('/api/empresa', function (req, res) {
     let cif = req.body.cif;
-    //console.log("cif " + cifK);
-
     conexion.query('insert into empresas(empresas.CIF) VALUES (?)', cif, function (err, success) {
-        res.status(200).send({ message: success });
+        if (err) {
+            res.status(500).send({ message: `Error no se ha podido salvar la empresa: ${err}` })
+        } else {
+            res.status(200).send({ message: success });
+        }
     });
 });
 
