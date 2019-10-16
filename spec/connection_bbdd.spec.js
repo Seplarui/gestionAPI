@@ -1,21 +1,25 @@
-const request= require('request');
-const server = require('../index');
+const request = require('request');
 
 
 const endpoint = 'http://localhost:3000/api/empresa';
 
-describe('connection_bbdd', function() {
+describe('connection_bbdd', function () {
 
-    describe('/api/empresa', function() {
-        it('should return status (200)', function(done) {
-            request.get(endpoint, function(error, response,body) {
-                console.log("statusCode: "+ response.statusCode);
-                console.log("error: "+error);
-                console.log("response: "+response);
+    describe('/api/empresa', function () {
+        it('should return status (200)', function (done) {
+            request.get(endpoint, function (error, response, body) {
                 expect(response.statusCode).toEqual(200);
                 done();
             })
         })
     })
 
+    describe('connection bbdd', function() {
+        it('should return connection to bbdd OK', function (done) {
+            /*request.get(endpoint, function (error, response, body) {
+                expect(response.statusCode).toEqual(200);
+                done();
+            })*/
+        })   
+    })
 });
